@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_17
+namespace Module_17.Devices
 {
-    abstract class Message
+    internal interface IPainter
     {
+        void Paint();
     }
 }

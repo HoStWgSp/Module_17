@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmailMessage.cs" />
-    <Compile Include="EmailMessageSender.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="MessageSender.cs" />
+    <Compile Include="CanvasPainterToPrinterAdapter.cs" />
+    <Compile Include="Devices\CanvasPainter.cs" />
+    <Compile Include="Devices\IPainter.cs" />
+    <Compile Include="Devices\IPrinter.cs" />
+    <Compile Include="Devices\PaperPrinter.cs" />
+    <Compile Include="ImageDrawer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmsMessage.cs" />
-    <Compile Include="SmsMessageSender.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
