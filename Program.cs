@@ -1,6 +1,4 @@
-﻿using Module_17.Devices;
-using Module_17;
-using Module_17;
+﻿using Module_17.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,16 +11,21 @@ namespace Module_17
     {
         static void Main(string[] args)
         {
-            var imageDrawer = new ImageDrawer();
+            
+            Component rootFolder = new Folder("Root");
 
-            PaperPrinter paperPrinter = new PaperPrinter();
+            Component myFile = new File("NewFile.txt");
 
-            imageDrawer.DrawWith(paperPrinter);
+            Folder documentFolder = new Folder("MyDocuments");
 
-            CanvasPainter canvasPainter = new CanvasPainter();
+            rootFolder.Add(myFile);
+            rootFolder.Add(documentFolder);
 
-            IPrinter imagePrinter = new CanvasPainterToPrinterAdapter(canvasPainter);
-            imageDrawer.DrawWith(imagePrinter);
+            Component MyFile2 = new File("NewFile2.txt");
+            documentFolder.Add(MyFile2);
+
+
+            rootFolder.Display();
 
             Console.ReadKey();
         }

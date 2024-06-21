@@ -43,12 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CanvasPainterToPrinterAdapter.cs" />
-    <Compile Include="Devices\CanvasPainter.cs" />
-    <Compile Include="Devices\IPainter.cs" />
-    <Compile Include="Devices\IPrinter.cs" />
-    <Compile Include="Devices\PaperPrinter.cs" />
-    <Compile Include="ImageDrawer.cs" />
+    <Compile Include="Components\Component.cs" />
+    <Compile Include="Components\File.cs" />
+    <Compile Include="Components\Folder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
