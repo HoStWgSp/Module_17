@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_17.Weapons
+namespace Module_17
 {
-    internal class Axe: IWeapon
+    internal class SmsMessage : Message
     {
-        public void Attack()
+        public SmsMessage()
         {
-            Console.WriteLine("Бьем топором");
+            Console.WriteLine("SMS отправдено");
         }
     }
 }

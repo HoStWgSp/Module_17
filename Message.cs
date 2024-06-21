@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_17.Weapons
+namespace Module_17
 {
-    internal interface IWeapon
+    abstract class Message
     {
-        void Attack();
     }
 }

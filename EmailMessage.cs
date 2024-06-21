@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_17.Movements
+namespace Module_17
 {
-    class RunMovement: IMovement
+    internal class EmailMessage : Message
     {
-        public void Start()
+        public EmailMessage()
         {
-            Console.WriteLine("Бежим");
+            Console.WriteLine("e-mail отправлен");
         }
     }
 }
