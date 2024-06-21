@@ -11,21 +11,11 @@ namespace Module_17
     {
         static void Main(string[] args)
         {
-            
-            Component rootFolder = new Folder("Root");
 
-            Component myFile = new File("NewFile.txt");
+            IdeFacade ideFacade = new IdeFacade(new Editor(), new Compiller(), new Runtime());
 
-            Folder documentFolder = new Folder("MyDocuments");
-
-            rootFolder.Add(myFile);
-            rootFolder.Add(documentFolder);
-
-            Component MyFile2 = new File("NewFile2.txt");
-            documentFolder.Add(MyFile2);
-
-
-            rootFolder.Display();
+            ideFacade.Start("Console.WriteLine(\"Hello World!\");");
+            ideFacade.Stop();
 
             Console.ReadKey();
         }

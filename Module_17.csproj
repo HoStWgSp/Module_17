@@ -43,9 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Component.cs" />
-    <Compile Include="Components\File.cs" />
-    <Compile Include="Components\Folder.cs" />
+    <Compile Include="Components\Compiller.cs" />
+    <Compile Include="Components\Editor.cs" />
+    <Compile Include="IdeFacade.cs" />
+    <Compile Include="Components\Runtime.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
