@@ -1,4 +1,4 @@
-﻿using Module_17.Components;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +12,16 @@ namespace Module_17
         static void Main(string[] args)
         {
 
-            IdeFacade ideFacade = new IdeFacade(new Editor(), new Compiller(), new Runtime());
+            Receiver receiver = new Receiver(false, false, true);
 
-            ideFacade.Start("Console.WriteLine(\"Hello World!\");");
-            ideFacade.Stop();
+            NotificationHandler emailNotificationHandler = new EmailNotificationHandler();
+            NotificationHandler voiceNotificationHandler = new VoiceNotificationHandler();
+            NotificationHandler smsNotificationHandler = new SmsNotificationHandler();
+
+            emailNotificationHandler.Successor = smsNotificationHandler;
+            smsNotificationHandler.Successor = voiceNotificationHandler;
+
+            emailNotificationHandler.Handle(receiver);
 
             Console.ReadKey();
         }

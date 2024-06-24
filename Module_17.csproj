@@ -43,12 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Compiller.cs" />
-    <Compile Include="Components\Editor.cs" />
-    <Compile Include="IdeFacade.cs" />
-    <Compile Include="Components\Runtime.cs" />
+    <Compile Include="EmailNotificationHandler.cs" />
+    <Compile Include="NotificationHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receiver.cs" />
+    <Compile Include="SmsNotificationHandler.cs" />
+    <Compile Include="VoiceNotificationHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
