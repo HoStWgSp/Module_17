@@ -1,5 +1,4 @@
 ﻿
-using Module_17.Observers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +11,13 @@ namespace Module_17
     {
         static void Main(string[] args)
         {
-            Stock stock = new Stock();
+            var type = new Type();
 
-            var bank = new Bank(stock);
-            var broker = new Broker(stock);
+            type.CalculateInterest(new GeneralType(new Account() { Type = "Обычный", Balance = 900 }));
 
-            // имитация торгов
-            stock.Market();
-            // брокер прекращает наблюдать за торгами
-            broker.StopTrade();
-            // имитация торгов
-            stock.Market();
+            Console.WriteLine();
+
+            type.CalculateInterest(new SalaryType(new Account() { Type = "Зарплатный", Balance = 1500 }));
 
             Console.ReadKey();
         }

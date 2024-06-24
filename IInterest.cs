@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Module_17
 {
-    internal class StockData
+    public interface IInterest
     {
-        public int USD { get; set; }
-        public int Euro { get; set; }
+        void CalculateInterest();
     }
 }
