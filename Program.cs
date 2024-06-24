@@ -1,5 +1,5 @@
 ﻿
-using Module_17.States;
+using Module_17.Observers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +12,17 @@ namespace Module_17
     {
         static void Main(string[] args)
         {
-                // инициализируем лифт (находится на земле)
-                Elevator elevator = new Elevator(new GroundElevatorState());
+            Stock stock = new Stock();
 
-                elevator.Up(); // подъем наверх
-                elevator.Down(); // спуск на землю
-                elevator.Down(); // спуск в подвал
-            
+            var bank = new Bank(stock);
+            var broker = new Broker(stock);
+
+            // имитация торгов
+            stock.Market();
+            // брокер прекращает наблюдать за торгами
+            broker.StopTrade();
+            // имитация торгов
+            stock.Market();
 
             Console.ReadKey();
         }

@@ -43,13 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Elevator.cs" />
+    <Compile Include="IObservable.cs" />
+    <Compile Include="Observers\Bank.cs" />
+    <Compile Include="Observers\Broker.cs" />
+    <Compile Include="Observers\IObserver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="States\GroundElevatorState.cs" />
-    <Compile Include="States\IElevatorState.cs" />
-    <Compile Include="States\LowerElevatorState.cs" />
-    <Compile Include="States\UpperElevatorState.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="StockData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
